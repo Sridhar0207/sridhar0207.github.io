@@ -9,5 +9,18 @@ background-color: #cccccc;
 <body background="bank.jpg">
 <h1>"Welcome to SKGS Bank"<br>
 Use the Chatbot given below</h1>
+  <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "fbcaa1d3-8d8d-41d1-81aa-95975db11b56", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "611b566f-889b-475f-bad3-8ff3bb780d67", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 </html>
